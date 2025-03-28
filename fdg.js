@@ -1,4 +1,4 @@
-// Rotate the array elements k time 
+// left Rotate the array elements k time 
 
 //    Method One 
  let arr = [1,2,3,4,5]
@@ -55,3 +55,22 @@ reverse(arr,0,k-1)
 reverse(arr,k,arr.length-1)
 reverse(arr,0,arr.length-1)
 console.log(arr);
+
+// right rotation 
+let arr = [1,2,3,4,5]
+let k = 2;
+k = k%arr.length;
+
+function reverse(arr, i , j){
+while(i<j){
+let temp = arr[i]
+arr[i] = arr[j]
+arr[j] = temp;
+i++;
+j--;
+
+}
+}
+reverse(arr,0,arr.length-1);
+reverse(arr,0,k-1);
+reverse(arr,k,arr.length-1)
