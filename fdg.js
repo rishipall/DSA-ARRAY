@@ -35,7 +35,7 @@ console.log(temp);
 
 
 
-// method three without extra space efficient way 
+// method three without extra space efficient way or block swap reversal algorithm
 let arr = [1,2,3,4,5]
 let k = 2;
 k = k%arr.length;
