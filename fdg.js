@@ -1,14 +1,41 @@
+// Rotate the array elements k time 
+
+//    Method One 
+ let arr = [1,2,3,4,5]
+let k = 2;
+k = k%arr.length;
+for(let j = 0;j<k;j++){
+    let copy = arr[0]
+for(let i = 0;i<arr.length-1;i++){
+    arr[i] = arr[i+1]
+}
+arr[arr.length-1] = copy
+
+}
+console.log(arr);
 
 
-// let arr = [1,2,3,4,5]
-// let copy = arr[0]
-// for(let i = 0;i<arr.length-1;i++){
-//     arr[i] = arr[i+1]
-// }
-// // arr[arr.length-1] = copy
-// console.log(arr);
 
 
+
+ // Method Two with extra space 
+let arr = [1,2,3,4,5]
+let k = 1
+let temp = new Array(arr.length)
+
+for(let i = 0;i<arr.length;i++){
+    temp[i] = arr[(i+k)%arr.length];
+
+}
+console.log(temp);
+
+
+
+
+
+
+
+// method three without extra space efficient way 
 let arr = [1,2,3,4,5]
 let k = 2;
 k = k%arr.length;
